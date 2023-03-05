@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mdb1/ViewStateController",
       "state" : {
-        "revision" : "80a89b18180e1f9d1d7343644818b771706bb6dc",
-        "version" : "0.0.3"
+        "revision" : "3ec0217c5a69ca2e5316cad37cbd17c45d545222",
+        "version" : "0.0.4"
       }
     }
   ],
