@@ -39,7 +39,7 @@ struct DemoScreen: View {
                                 },
                                 loadingAfterErrorType: loadingAfterErrorType
                             )
-
+                            .debugState(controller: $controller, mockInfo: .init(name: "Mock", age: 900, emoji: "😌"))
                         Divider()
                         DemoLoadingOptionsView(
                             loadingType: $initialLoadingType,

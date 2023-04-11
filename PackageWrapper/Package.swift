@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "PackageWrapper",
+    platforms: [
+        .iOS(.v16)
+    ],
     products: [
         .library(
             name: "PackageWrapper",
@@ -14,7 +17,7 @@ let package = Package(
     dependencies: [
         // Uncomment to develop against local package
 //        .package(path: "../../ViewStateController")
-        .package(url: "https://github.com/mdb1/ViewStateController", from: "0.0.6")
+        .package(url: "https://github.com/mdb1/ViewStateController", from: "0.0.7")
     ],
     targets: [
         .target(

@@ -22,7 +22,9 @@ struct ListScreen: View {
                         },
                         loadingAfterInfoType: .overCurrentContent(contentOpacity: 0.2),
                         errorView: { _ in
-                            .init(retryAction: {})
+                            .init(retryAction: {
+                                initializeState()
+                            })
                         })
                 Spacer()
                 Button("Reset State") {
@@ -39,6 +41,7 @@ struct ListScreen: View {
                 initializeState()
             }
         }
+        .debugState(controller: $controller, mockInfo: [.init(id: "1", name: "Mock Pokemon")])
     }
 
     func initializeState() {
