@@ -56,7 +56,7 @@ struct DemoLoadingOverCurrentOptionsView: View {
         HStack {
             Text("Alignment")
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .layoutPriority(900)
+
             Spacer()
             ZStack {
                 Capsule()
@@ -66,7 +66,9 @@ struct DemoLoadingOverCurrentOptionsView: View {
                     ForEach(AlignmentDemoOption.allCases, id: \.self) {
                         Text($0.rawValue)
                     }
-                }.onChange(of: alignment) { _ in
+                }
+                .layoutPriority(900)
+                .onChange(of: alignment) { _ in
                     applyOverCurrentState()
                 }
             }

@@ -25,7 +25,7 @@ struct DemoDefaultToastOptionsView: View {
         HStack {
             Text("Position")
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .layoutPriority(900)
+
             Spacer()
             ZStack {
                 Capsule()
@@ -38,7 +38,9 @@ struct DemoDefaultToastOptionsView: View {
                     ) {
                         Text($0.rawValue)
                     }
-                }.onChange(of: position) { _ in
+                }
+                .layoutPriority(900)
+                .onChange(of: position) { _ in
                     updatePosition()
                 }
             }
@@ -47,7 +49,7 @@ struct DemoDefaultToastOptionsView: View {
         HStack {
             Text("Tint Color")
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .layoutPriority(900)
+
             Spacer()
             ZStack {
                 Capsule()
@@ -60,7 +62,9 @@ struct DemoDefaultToastOptionsView: View {
                     ) {
                         Text($0.description)
                     }
-                }.onChange(of: tintColor) { _ in
+                }
+                .layoutPriority(900)
+                .onChange(of: tintColor) { _ in
                     updateState()
                 }
             }
@@ -69,7 +73,7 @@ struct DemoDefaultToastOptionsView: View {
         HStack {
             Text("Background Color")
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .layoutPriority(900)
+
             Spacer()
             ZStack {
                 Capsule()
@@ -82,7 +86,9 @@ struct DemoDefaultToastOptionsView: View {
                     ) {
                         Text($0.description)
                     }
-                }.onChange(of: backgroundColor) { _ in
+                }
+                .layoutPriority(900)
+                .onChange(of: backgroundColor) { _ in
                     updateState()
                 }
             }

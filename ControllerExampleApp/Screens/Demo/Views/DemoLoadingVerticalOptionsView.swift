@@ -23,7 +23,7 @@ struct DemoLoadingVerticalOptionsView: View {
         HStack {
             Text("Option")
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .layoutPriority(900)
+                
             Spacer()
             ZStack {
                 Capsule()
@@ -36,7 +36,9 @@ struct DemoLoadingVerticalOptionsView: View {
                     ) {
                         Text($0.rawValue)
                     }
-                }.onChange(of: option) { _ in
+                }
+                .layoutPriority(900)
+                .onChange(of: option) { _ in
                     applyVerticalState()
                 }
             }
@@ -56,7 +58,7 @@ struct DemoLoadingVerticalOptionsView: View {
         HStack {
             Text("Alignment")
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .layoutPriority(900)
+
             Spacer()
             ZStack {
                 Capsule()
@@ -66,7 +68,9 @@ struct DemoLoadingVerticalOptionsView: View {
                     ForEach(AlignmentDemoOption.horizontalCases, id: \.self) {
                         Text($0.rawValue)
                     }
-                }.onChange(of: alignment) { _ in
+                }
+                .layoutPriority(900)
+                .onChange(of: alignment) { _ in
                     applyVerticalState()
                 }
             }

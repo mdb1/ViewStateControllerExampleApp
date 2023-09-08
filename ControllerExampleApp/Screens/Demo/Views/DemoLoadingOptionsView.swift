@@ -66,7 +66,6 @@ struct DemoLoadingOptionsView: View {
         HStack {
             Text("Type")
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .layoutPriority(900)
 
             ZStack {
                 Capsule()
@@ -78,6 +77,7 @@ struct DemoLoadingOptionsView: View {
                         Text($0.name.rawValue)
                     }
                 }
+                .layoutPriority(900)
                 .onChange(of: selectedOption) { newValue in
                     loadingType = newValue.type
                 }

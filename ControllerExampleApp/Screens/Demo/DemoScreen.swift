@@ -99,7 +99,14 @@ struct DemoScreen: View {
                 Button("Loading") { setLoading() }
                 Button("Loaded") { setLoaded() }
                 Button("Error") { setError() }
-                Button("Toast") { withAnimation { displayToast = true } }
+                Button("Toast") {
+                    if displayToast {
+                        displayToast = false
+                    }
+                    withAnimation {
+                        displayToast = true
+                    }
+                }
             }
             Button("Reset") { controller.reset() }
         }
